@@ -34,8 +34,7 @@ function middleDate() {
     document.getElementById("daynamemid").innerHTML = output;
 }
 
-function weather() {
-    var key = "insert key here";
+function weather( key ) {
     fetch('https://api.openweathermap.org/data/2.5/weather?id=5950267&appid=' + key)  
     .then(function(resp) { return resp.json() }) // Convert data to json
     .then(function(data) {
@@ -48,30 +47,14 @@ function weather() {
   }
   
 function reloadCSS() {
-var links = document.getElementsByTagName("link");
+    var links = document.getElementsByTagName("link");
 
-for (var x in links) {
-    var link = links[x];
+    for (var x in links) {
+        var link = links[x];
 
-    if (link.getAttribute("type").indexOf("css") > -1) {
-        link.href = link.href + "?id=" + new Date().getMilliseconds();
+        if (link.getAttribute("type").indexOf("css") > -1) {
+            link.href = link.href + "?id=" + new Date().getMilliseconds();
+        }
     }
 }
-}
 
-
-
-  window.onload = function() {
-    weather( 6167865 );   
-    getDayOfWeek();
-    getTime();
-    getDDMMYY();
-    middleDate();
-    getJoke();
-  }
-
-setInterval(getTime, 1000);
-setInterval(getDDMMYY(), 7200000)
-setInterval(getDayOfWeek(), 7200000)
-setInterval(reloadCSS, 1800000);
-setInterval(weather( 6167865 ), 7200000)
