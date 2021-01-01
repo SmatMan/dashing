@@ -1,6 +1,6 @@
 @font-face {
     font-family: SanFransisco;
-    src: url(fonts/SFProDisplay-Bold.ttf);
+    src: url(static/fonts/font.ttf);
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 .time {
