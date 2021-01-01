@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import config # i made this config file myself, it just has my api keys
 
 app = Flask(__name__)
     
