@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="{{ url_for('static',    filename='css/index.css') }}">
         
     </head>
     <body>
@@ -23,7 +23,7 @@
             <h6 id="daynamemid" class="time">Loading...</h6>
         </div>
 
-        <script src="scripts/index.js"></script>
+        <script src="{{url_for('static', filename='js/index.js')}}"></script>
     </body>
 </html>
 
