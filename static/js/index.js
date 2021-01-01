@@ -44,9 +44,7 @@ function weather() {
         document.getElementById('temp').innerHTML = celcius + '&deg;C';
         document.getElementById('weatherdesc').innerHTML = conditions;
     })
-    .catch(function() {
-        console.log("there was an error idk what it was but oh well good luck debugging this shit")
-    });
+    .catch(e => console.log(e));
   }
   
 function reloadCSS() {
