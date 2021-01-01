@@ -1,10 +1,14 @@
 @font-face {
-    font-family: SanFransisco;
-    src: url(static/fonts/font.ttf);
+  font-family: 'DashboardFont';
+  src: url('/static/fonts/font.woff2') format('woff2'),
+      url('/static/fonts/font.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 .time {
-    font-family: SanFransisco;
+    font-family: DashboardFont;
     padding: 0;
     margin:0;
     font-size: 500%;
@@ -23,7 +27,7 @@
 }
 
 .midDate {
-  font-family: SanFransisco;
+  font-family: DashboardFont;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -74,7 +78,7 @@ body, html {
     position:absolute;
    top:2.5%;
    right: 1%;
-    font-family: 'SanFransisco', sans-serif;
+    font-family: 'DashboardFont', sans-serif;
   border-radius: 25px;
   -webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
@@ -260,7 +264,7 @@ body, html {
   border: none;
   border-radius: 25px;
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'DashboardFont', sans-serif;
   background-image: var(--gradient);
   color: #ffffff;
   font-weight: 700;
