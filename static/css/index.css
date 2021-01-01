@@ -44,7 +44,7 @@ body {
 }
 .bg {
     /* The image used */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://source.unsplash.com/random/3840x2160?nature');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/static/bg/coffee-background.gif');
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
