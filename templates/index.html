@@ -36,11 +36,12 @@
                 getTime();
                 middleDate();
                 timeOfDay();
+                setInterval(getTime(), 1000);
+                setInterval(getDDMMYY(), 7200000)
+                setInterval(getDayOfWeek(), 7200000)
+                setInterval(weather( {{ owmkey|tojson }} ), 7200000)
             }
-            setInterval(getTime(), 1000);
-            setInterval(getDDMMYY(), 7200000)
-            setInterval(getDayOfWeek(), 7200000)
-            setInterval(weather( {{ owmkey|tojson }} ), 7200000)
+            
         </script>
     </body>
 </html>
