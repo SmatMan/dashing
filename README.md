@@ -2,6 +2,8 @@
 
 ## Dashing is a beautiful personal dashboard that can run on anything with a web browser. It's made entirely on HTML, CSS, and JavaScript. It runs on Flask and Python.
 
+#### A fork of this project made by one of my best friends is accessible [here](https://github.com/Dannnington/miniboard). I'd reccomend you check it out if you want a standalone application with other features that Dashing might not include. 
+
 ##### ⚠ Dashing is in active development. Expect bugs.
 
 ### Screenshots:
