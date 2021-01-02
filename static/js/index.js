@@ -5,24 +5,6 @@ function getTime() {
     document.getElementById("timeJS").innerHTML = d;
 }
 
-function getDayOfWeek() {
-    var now = new Date();
-    var day = days[now.getDay()];
-    console.log(day);
-    document.getElementById("dayname").innerHTML = day;
-}
-
-function getDDMMYY() {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const dateObj = new Date();
-    const month = monthNames[dateObj.getMonth()];
-    const day = String(dateObj.getDate()).padStart(2, '0');
-    const year = dateObj.getFullYear();
-    const output = month + '\n' + day + ', ' + year;
-    document.getElementById("ddmmyy").innerHTML = output;
-    document.getElementById("daynamemid").innerHTML = output;
-}
-
 function middleDate() {
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const dateObj = new Date();
@@ -32,6 +14,19 @@ function middleDate() {
     const dayforweek = days[dateObj.getDay()];
     const output = dayforweek + ", " + month + '\n' + day + ', ' + year;
     document.getElementById("daynamemid").innerHTML = output;
+}
+
+function timeOfDay() {
+    var today = new Date()
+    var curHr = today.getHours()
+
+    if (curHr < 12) {
+        document.getElementById("timeofdaytext").innerHTML = "Good Morning.";
+    } else if (curHr < 18) {
+        document.getElementById("timeofdaytext").innerHTML = "Good Afternoon.";
+    } else {
+        document.getElementById("timeofdaytext").innerHTML = "Good Evening.";
+}
 }
 
 function weather( key ) {
