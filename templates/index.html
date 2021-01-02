@@ -3,27 +3,34 @@
         <link rel="stylesheet" href="{{ url_for('static',    filename='css/index.css') }}">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type=text/javascript>
-            fetch('/test')
-      .then(function (response) {
-          return response.json();
-      }).then(function (text) {
-          console.log(text.greeting); 
-      });
-        </script>
+            function getDaysUntil() {
+        $.getJSON('/test', function(data){
+            document.getElementById('timeUntilTicker').innerHTML = data.result + ' Days';
+        });
+};
+            </script>
     </head>
     <body>
         <div class="bg"></div>
         <div class="container">
-            <div class="weather-side">
-                <div class="weather-gradient"></div>
-                <div class="weather-container">
+            <div class="side">
+                <div class="card-gradient"></div>
+                <div class="card-container">
                     <h1 id="temp" class="weather-temp">Placeholder Degrees</h1>
                     <h3 class="weather-desc" id="weatherdesc">Placeholder Weather Description</h3>
                     <img src="{{ url_for('static',    filename='icons/arrowlocation.svg') }}" class="location-icon" data-feather="map-pin"></i><span class="location">Etobicoke, CA</span>
                 </div>
             </div>
         </div>
-        
+        <div class="timeuntilcontainer">
+            <div class="side">
+                <div class="card-gradient"></div>
+                <div class="card-container">
+                    <h1 id="timeUntilTicker" class="weather-temp">x Days</h1>
+                    <h3 class="weather-desc" id="weatherdesc">until February 1st, 2021.</h3>
+                </div>
+            </div>
+        </div>
         <div class="centerDiv">
             <h1 id="timeJS" class="time">Placeholder</h1>
             <h6 id="timeofdaytext" class="time">Loading...</h6>
@@ -36,10 +43,10 @@
                 getTime();
                 middleDate();
                 timeOfDay();
+                getDaysUntil();
                 setInterval(getTime(), 1000);
-                setInterval(getDDMMYY(), 7200000)
-                setInterval(getDayOfWeek(), 7200000)
                 setInterval(weather( {{ owmkey|tojson }} ), 7200000)
+                setInterval(getDaysUntil(), 14400000)
             }
             
         </script>

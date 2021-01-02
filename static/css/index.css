@@ -89,7 +89,21 @@ body, html {
   
 }
 
-.weather-side {
+.timeuntilcontainer {
+  position:absolute;
+ top:17%;
+ right: 1%;
+  font-family: 'DashboardFont', sans-serif;
+  border-radius: 25px;
+-webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+background-color: #222831;
+color: #ffffff;
+height: 140px;
+
+}
+
+.side {
   position: relative;
   height: 100%;
   border-radius: 25px;
@@ -107,12 +121,12 @@ body, html {
   float: left;
 }
 
-.weather-side:hover {
+.side:hover {
   -webkit-transform: scale(1.1) perspective(1500px) rotateY(10deg);
           transform: scale(1.1) perspective(1500px) rotateY(10deg);
 }
 
-.weather-gradient {
+.card-gradient {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -149,7 +163,7 @@ body, html {
   margin-right: 5px;
 }
 
-.weather-container {
+.card-container {
   position: absolute;
   bottom: 25px;
   left: 25px;
