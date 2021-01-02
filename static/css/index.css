@@ -19,6 +19,7 @@
 #timeJS {
   font-size: 1200%;
 }
+
 .centerDiv {
   position: absolute;
     top: 50%;
@@ -84,7 +85,7 @@ body, html {
           box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
   background-color: #222831;
   color: #ffffff;
-  height: 400px;
+  height: 170px;
   
 }
 
