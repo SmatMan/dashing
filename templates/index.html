@@ -44,9 +44,9 @@
                 middleDate();
                 timeOfDay();
                 getDaysUntil();
-                setInterval(getTime(), 1000);
-                setInterval(weather( {{ owmkey|tojson }} ), 7200000)
-                setInterval(getDaysUntil(), 14400000)
+                setInterval(getTime, 1000);
+                setInterval('weather( {{ owmkey|tojson }} )', 7200000);
+                setInterval('getDaysUntil()', 14400000);
             }
             
         </script>
