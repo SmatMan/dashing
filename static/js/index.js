@@ -1,6 +1,7 @@
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function getTime() {
+    
     var d = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
     document.getElementById("timeJS").innerHTML = d;
 }
