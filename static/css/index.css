@@ -103,6 +103,22 @@ height: 140px;
 
 }
 
+.spotifycontainer {
+  position:absolute;
+ top:2%;
+ left: 1%;
+  font-family: 'DashboardFont', sans-serif;
+  border-radius: 25px;
+-webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+background-color: #222831;
+color: #ffffff;
+height: 400px;
+
+}
+
+
+
 .side {
   position: relative;
   height: 100%;
@@ -133,6 +149,20 @@ height: 140px;
   top: 0;
   left: 0;
   background-image: var(--gradient);
+  border-radius: 25px;
+  opacity: 0.8;
+}
+
+#spotify-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(31, 156, 6, 0.7), rgba(0, 0, 0, 0.7)), url("https://lastfm.freetls.fastly.net/i/u/174s/5d033ef39b6dd6058a487e60a0eed29a.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size:cover;
   border-radius: 25px;
   opacity: 0.8;
 }
@@ -179,10 +209,35 @@ height: 140px;
   font-weight: 700;
   font-size: 4em;
 }
+.song-title {
+  position: relative;
+  bottom: 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.album-art {
+  position: fixed;
+  width: 250px;
+  length: 250px;
+  top: 8%;
+}
+
+.play-pause {
+  position: fixed;
+  width: 35px;
+  length: 35px;
+  bottom: 3%;
+  right: 5%;
+}
 
 .weather-desc {
   margin: 0;
 }
+
 
 .info-side {
   position: relative;

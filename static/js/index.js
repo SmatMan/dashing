@@ -41,6 +41,32 @@ function weather( key ) {
     })
     .catch(e => console.log(e));
   }
+
+  function lastfm( key ) {
+    fetch('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=imsmatman&api_key=' + key + '&format=json')  
+    .then(function(resp) { return resp.json() }) // Convert data to json
+    .then(function(data) {
+        console.log(data)
+        var songtitle = data.recenttracks.track[0].name
+        var artist = data.recenttracks.track[0].artist["#text"]
+        var albumcover = data.recenttracks.track[0].image[2]["#text"]
+        try {
+            if (data.recenttracks.track[0]["@attr"].nowplaying = "true") {
+                document.getElementById('play-pause').src="static/icons/playing_icon.gif";
+                document.getElementById('song-title').innerHTML = songtitle;
+                document.getElementById('artist-name').innerHTML = artist;
+                document.getElementById('spotify-gradient').style.backgroundImage="linear-gradient(rgba(31, 156, 6, 0.9), rgba(0, 0, 0, 0.9)), url('" + albumcover + "')";
+            } 
+        } catch (e){
+                document.getElementById('play-pause').src="static/icons/paused.png";
+                document.getElementById('song-title').innerHTML = songtitle;
+                document.getElementById('artist-name').innerHTML = artist;
+                document.getElementById('spotify-gradient').style.backgroundImage="linear-gradient(rgba(31, 156, 6, 0.9), rgba(0, 0, 0, 0.9)), url('" + albumcover + "')";
+            }
+        
+    })
+    .catch(e => console.log(e));
+  }
   
 function reloadCSS() {
     var links = document.getElementsByTagName("link");
